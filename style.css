@@ -1,0 +1,30 @@
+/* style.css – minimal reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Body: simple font & spacing */
+body {
+  font-family: sans-serif; /* swap if you have a brand font */
+  line-height: 1.5;
+  padding: 2rem;
+  background: #fafafa; /* light gray */
+  color: #111;
+}
+
+/* Header styling */
+header {
+  margin-bottom: 2rem;
+}
+
+/* Project cards */
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
