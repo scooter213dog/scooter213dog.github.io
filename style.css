@@ -100,3 +100,26 @@ a {
 .project-card.cq2:hover .project-media::before {
   opacity: 1;
 }
+
+/* Cookie Quest 2 bouncing icon */
+.project-card.cq2 {
+  position: relative;
+  overflow: hidden;
+}
+.cq2-icon {
+  position: absolute;
+  width: 60px;
+  pointer-events: none;
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+/* Cryptic symbol */
+.cryptic {
+  position: fixed;
+  bottom: 5px;
+  right: 8px;
+  opacity: 0.08;
+  font-size: 14px;
+  pointer-events: none;
+}
