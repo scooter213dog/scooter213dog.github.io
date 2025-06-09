@@ -6,8 +6,16 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   padding: 2rem;
-  background: linear-gradient(180deg, #222, #444);
+  background: linear-gradient(45deg, #222, #444, #222);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
   color: #eee;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Header styling */
@@ -50,27 +58,45 @@ a {
   position: relative;
   overflow: visible;
 }
-.project-card.cq1 .sprite {
+.project-card.cq1 .sprite-container {
   position: absolute;
-  bottom: -100px;
-  width: 80px;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
   pointer-events: none;
-  transition: bottom 0.3s ease;
+  opacity: 0;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
 }
-.project-card.cq1:hover .sprite {
-  bottom: calc(100% - 40px);
+.project-card.cq1:hover .sprite-container {
+  bottom: -20px;
+  opacity: 1;
 }
-.project-card.cq1 .sprite.protag {
-  left: 10%;
-}
-.project-card.cq1 .sprite.maggy {
-  right: 10%;
+.project-card.cq1 .sprite {
+  width: 80px;
 }
 
 /* Cookie Quest 2 glow on hover */
+.project-card.cq2 .project-media {
+  position: relative;
+}
 .project-card.cq2 .project-media img {
   transition: box-shadow 0.3s ease;
 }
+.project-card.cq2 .project-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 255, 0, 0.6) 0%, rgba(255, 255, 0, 0) 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border-radius: 6px;
+}
 .project-card.cq2:hover .project-media img {
   box-shadow: 0 0 15px 4px rgba(255, 255, 0, 0.7);
+}
+.project-card.cq2:hover .project-media::before {
+  opacity: 1;
 }
