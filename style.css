@@ -44,3 +44,33 @@ a {
   font-weight: bold;
   color: #9cf;
 }
+
+/* Cookie Quest 1 sprite hover */
+.project-card.cq1 {
+  position: relative;
+  overflow: visible;
+}
+.project-card.cq1 .sprite {
+  position: absolute;
+  bottom: -100px;
+  width: 80px;
+  pointer-events: none;
+  transition: bottom 0.3s ease;
+}
+.project-card.cq1:hover .sprite {
+  bottom: calc(100% - 40px);
+}
+.project-card.cq1 .sprite.protag {
+  left: 10%;
+}
+.project-card.cq1 .sprite.maggy {
+  right: 10%;
+}
+
+/* Cookie Quest 2 glow on hover */
+.project-card.cq2 .project-media img {
+  transition: box-shadow 0.3s ease;
+}
+.project-card.cq2:hover .project-media img {
+  box-shadow: 0 0 15px 4px rgba(255, 255, 0, 0.7);
+}
